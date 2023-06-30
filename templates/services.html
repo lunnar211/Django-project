@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+{% block title %}
+Services
+{% endblock title %}
+{% block body %}
+<div class="container3">
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Transaction System - Services</title>
+    <style>
+      /* styles.css */
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+nav h1 {
+  color: #333;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.service {
+  margin-bottom: 40px;
+}
+
+.service h3 {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input[type="file"] {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Add responsive styles for smaller screens */
+@media (max-width: 600px) {
+  form input[type="file"],
+  button {
+    width: 100%;
+  }
+}
+footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Styling for the money transaction section */
+.money-transaction {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Styling for the back to home button */
+.back-to-home {
+  font-size: 14px;
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.back-to-home:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+
+    </style>
+    {% comment %} <link rel="stylesheet" href="styles.css"> {% endcomment %}
+  </head>
+  
+  <body>
+    <header>
+      <nav>
+        <h1>Money Transaction System</h1>
+      </nav>
+    </header>
+  
+    <main>
+      <section class="services-section">
+        <h2>Our Services</h2>
+        <div class="service">
+          <h3>ATM Services</h3>
+          <form id="atm-form" enctype="multipart/form-data">
+            <label for="atm-file">Upload Python file:</label>
+            <input type="file" id="atm-file" accept=".py" required>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="service">
+          <h3>Bank Services</h3>
+          <form id="bank-form" enctype="multipart/form-data">
+            <label for="bank-file">Upload Python file:</label>
+            <input type="file" id="bank-file" accept=".py" required>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  
+    {% comment %} <script src="script.js"></script> {% endcomment %}
+ 
+    <script>
+      /* styles.css */
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+nav h1 {
+  color: #333;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.service {
+  margin-bottom: 40px;
+}
+
+.service h3 {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input[type="file"] {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Add responsive styles for smaller screens */
+@media (max-width: 600px) {
+  form input[type="file"],
+  button {
+    width: 100%;
+  }
+}
+
+    </script>
+    <div class="footer">
+      <footer>
+        <div class="money-transaction">
+          &copy; 2023 Dipesh_Karki.. All rights reserved.
+
+        </div>
+        <a href="/index" class="back-to-home">Back to Home</a>
+      </footer>
+      </div>
+    
+  </body>
+  
+  </html>
+  
+</div>
+{% endblock body %}

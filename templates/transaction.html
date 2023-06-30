@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money Transaction System</title>
+<style>
+/* styles.css */
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+nav h1 {
+  color: #333;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Add responsive styles for smaller screens */
+@media (max-width: 600px) {
+  form input,
+  button {
+    width: 100%;
+  }
+}
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Styling for the money transaction section */
+  .money-transaction {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the back to home button */
+  .back-to-home {
+    font-size: 14px;
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .back-to-home:hover {
+    background-color: #333;
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+  <div class="container5">
+  <header>
+    <nav>
+      <h1>Money Transaction System</h1>
+    </nav>
+  </header>
+
+  <main>
+    <section class="transaction-section">
+      <h2>Make a Transaction</h2>
+      <form id="transaction-form">
+        <label for="sender">Sender:</label>
+        <input type="text" id="sender" required>
+
+        <label for="receiver">Receiver:</label>
+        <input type="text" id="receiver" required>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" required>
+
+        <button type="submit">Send Money</button>
+      </form>
+    </section>
+
+    <section class="transaction-history">
+      <h2>Transaction History</h2>
+      <table id="transaction-table">
+        <thead>
+          <tr>
+            <th>Sender</th>
+            <th>Receiver</th>
+            <th>Amount</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Transaction history rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    // script.js
+
+// Transaction form submission
+document.getElementById('transaction-form').addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevent form submission
+
+  // Get form values
+  var sender = document.getElementById('sender').value;
+  var receiver = document.getElementById('receiver').value;
+  var amount = document.getElementById('amount').value;
+
+  // Create a new row for the transaction history table
+  var newRow = document.createElement('tr');
+  newRow.innerHTML = `
+    <td>${sender}</td>
+    <td>${receiver}</td>
+    <td>${amount}</td>
+    <td>${new Date().toLocaleString()}</td>
+  `;
+
+  // Append the new row to the transaction history table
+  var transactionTable = document.getElementById('transaction-table');
+  var tbody = transactionTable.querySelector('tbody');
+  tbody.appendChild(newRow);
+
+  // Clear form inputs
+  document.getElementById('sender').value = '';
+  document.getElementById('receiver').value = '';
+  document.getElementById('amount').value = '';
+});
+
+  </script>
+</div>
+<div class="footer">
+    <footer>
+      <div class="money-transaction">
+        &copy; 2023 Dipesh_Karki.. All rights reserved.
+      </div>
+      <a href="/index" class="back-to-home">Back to Home</a>
+    </footer>
+    </div>
+</body>
+</html>

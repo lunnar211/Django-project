@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% block title %}
+Money Transaction System
+{% endblock title %}
+{% block body %}
+<div class="container my-4">
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Money Transaction System</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .container {
+        width: 80%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+      
+      p {
+        font-size: 18px;
+        color: #888;
+        margin-bottom: 30px;
+      }
+      
+      .cta-buttons {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .btn {
+        display: inline-block;
+        padding: 12px 20px;
+        margin: 10px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .btn:hover {
+        background-color: #45a049;
+      }
+      <style>
+        /* Styling for the footer */
+        footer {
+          background-color: #f2f2f2;
+          padding: 20px;
+          text-align: center;
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+        }
+        
+        /* Styling for the money transaction section */
+        .money-transaction {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+        
+        /* Styling for the back to home button */
+        .back-to-home {
+          font-size: 14px;
+          text-decoration: none;
+          color: #333;
+          padding: 5px 10px;
+          border: 1px solid #333;
+          border-radius: 4px;
+          transition: background-color 0.3s;
+        }
+        
+        .back-to-home:hover {
+          background-color: #333;
+          color: #fff;
+        }
+          
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to the Money Transaction System</h1>
+      <p>Track and manage your financial transactions with ease.</p>
+      <div class="cta-buttons">
+        <a href="/login" class="btn">Login</a>
+        <a href="/signup" class="btn">Sign up</a>
+      </div>
+    </div>
+  
+    <script src="script.js"></script>
+  </body>
+  </html>
+  <footer>
+    <div class="money-transaction">
+      &copy; 2023 Dipesh_Karki.. All rights reserved.
+    </div>
+    <a href="/index" class="back-to-home">Back to Home</a>
+  </footer>
+</div>
+{% endblock body %}
